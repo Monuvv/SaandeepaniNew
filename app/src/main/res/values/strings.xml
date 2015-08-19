@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">Saandeepani</string>
+    <string name="action_settings">Settings</string>
+    <string name="login_text">Please login to connect</string>
+    <string name="userid_hint">User Name</string>
+    <string name="regmailid">Enter Registered mail id</string>
+    <string name="password">Password</string>
+    <string name="login_btn">Login</string>
+    <string name="login_reset">Reset</string>
+    <string name="remember">Remember Me</string>
+    <string name="login_parent_teacher_txt">PARENT/TEACHER LOGIN</string>
+    <string name="login_footer_txt">Powered by valuechecktech.com</string>
+    <string name="title_notification">NotificationActivity</string>
+    <string name="parent_notice">NoticeActivity</string>
+    <string name="forgetpwd">Forget Password</string>
+    <string name="forgetpwdstring">Enter your Email Address here to receive a link to change password.</string>
+    <string name="sendmail">SEND EMAIL</string>
+    <string name="changepwd">Change Password</string>
+    <string name="help">HELP</string>
+    <string name="path">Attachment</string>
+    <string name="pushbotsUrl">https://api.pushbots.com/deviceToken/del</string>
+    <string name="mail_sent">/app/conversations/sent</string>
+
+    <!--activity_child_homeworkvity_child_homework.xml used text-->
+    <string name="to_hint">To</string>
+    <string name="text_to_send_hint">Type here...</string>
+    <string name="home_text_to_send_lbl">Please enter text to send.</string>
+    <string name="home_text_to_send_hint">Type your message here...</string>
+    <string name="home_select_student">Select Student</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_Login">LoginActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_calendar">Calendar Activity</string>
+    <string name="title_activity_attendance">Attendance Activity</string>
+    <string name="title_parent_mail_details">MailDetails Activity</string>
+
+    <!--ParentHomeActivity-->
+    <string name="switch_child">SWITCH CHILD</string>
+    <string name="my_child">gotoMyChild</string>
+    <string name="home_work">Home Work</string>
+    <string name="time_tabel">Time Table</string>
+    <string name="inbox">Inbox</string>
+    <string name="chat">Chat</string>
+    <string name="calender">Calender</string>
+    <string name="attendence">Attendance</string>
+    <string name="transport">Transport</string>
+    <string name="Mail">Transport</string>
+    <string name="child_exams_activity">ExamsActivity</string>
+    <string name="gallary">Gallary</string>
+    <string name="profile">Profile</string>
+    <string name="profileimagechange_url">/app/updateProfilePic</string>
+    <!--Endpoint urls -->
+
+         <string name="base_url1">http://gotomychild.elasticbeanstalk.com</string>
+    <string name="base_url">http://Default-Environment-7mcjqmmfd3.elasticbeanstalk.com</string>
+    <string name="login_url_endpoint">/api/login</string>
+    <string name="url_exams">MyChild/Parent/username/</string>
+    <string name="parent_url_endpoint">/Parent/username/</string>
+    <string name="home_work_for_child">/app/getHomework/student/</string>
+    <string name="home_work_student_assigned_date">/app/getHomework/student/</string>
+    <string name="timetable_child">/app/timetable/</string>
+    <string name="parent_mail">/app/conversations/get/v1</string>
+    <string name="calendar_task">/app/events/student/1/</string>
+    <string name="calendar_task_parent">/app/events/student/</string>
+    <string name="attendance">/app/attendance/student/</string>
+    <string name="parent_email_to_teahcer">/app/conversations/new</string>
+    <string name="timetabel_teacher">/app/teacher/timetable/</string>
+    <string name="calender_task_teacher">/app/events/teacher/</string>
+    <string name="gallery_url">/app/getuserAlbums</string>
+    <string name="changepwd_url">/app/changePassword</string>
+    <string name="map_getbusgeocode_url">/app/locationDetails/</string>
+
+
+    <!--teacher flow-->
+    <string name="url_teacher_deatils">/Teacher/id</string>
+    <string name="url_post_assign_task">/app/teacher/homework/save</string>
+    <string name="url_teachers_list">/Teacher/id/</string>
+    <string name="url_teacher_email">/app/conversations/get/</string>
+    <string name="url_teacher_exam">/app/exams/result/1</string>
+    <string name="no_network_connection">No Network connection</string>
+    <string name="title_activity_assign_task">AssignTaskActivity</string>
+
+
+    <!--techaer_homescreen-->
+    <string name="assign_task">Assign Task</string>
+    <string name="time_table">Time Table</string>
+    <string name="exmas">Exams</string>
+    <string name="mail_box">Mail Box</string>
+    <string name="calendar">Calendar</string>
+    <string name="teacher_chat">Chat</string>
+    <string name="notice">Notice</string>
+
+
+    <!--assigntask-->
+    <string name="assign_task_title">Assign Task</string>
+    <string name="choose_class_caps">CHOOSE CLASS *</string>
+    <string name="choose_subject_caps">CHOOSE SUBJECT</string>
+    <string name="task_to_do_caps">TASK TO DO</string>
+    <string name="choose_a_due_date_caps">CHOOSE A DUE DATE</string>
+    <string name="select_students_caps">SELECT STUDENTS</string>
+    <string name="all_students_caps">ALL STUDENTS</string>
+    <string name="selected_students">Selected Students</string>
+    <string name="assign_task_caps">ASSIGN TASK</string>
+    <string name="mondatory_fields">* Mandatory fields</string>
+    <string name="title_activity_select_student">SelectStudentActivity</string>
+    <string name="title_teacher_timetabel">TimeTabelActivity</string>
+    <string name="title_teacher_calender">TeacherCalenderActivity</string>
+
+
+    <!--selectestudent activity-->
+    <string name="start_typing_name">Start typing a name</string>
+    <string name="all_students">All Students</string>
+    <string name="select_students">Select Students</string>
+    <string name="done_caps">DONE</string>
+    <string name="network_error">Network error</string>
+    <string name="loading_text">Loading...</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="pref_access_token">access_token</string>
+    <string name="pref_username">username</string>
+    <string name="pref_role">user_role</string>
+    <string name="send">Send</string>
+
+    <!--exams_screen-->
+    <string name="students_data">Students data</string>
+    <string name="title_activity_exams">ExamsActivity</string>
+    <string name="list_of_exams">List of Exams</string>
+    <string name="key_from">key_from</string>
+    <string name="key_from_parent">from_parent</string>
+    <string name="key_from_teacher">from_teacher</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="whattodo">What to do?</string>
+    <!--Exams-->
+    <string name="exams_title">Exams</string>
+
+    <!--ChildInboxActivity-->
+    <string name="all_mails">ALL MAILS</string>
+    <string name="date">25 MAR 2015</string>
+    <string name="day">Today</string>
+    <string name="write_mail">Write Mail</string>
+    <string name="write_mail_to">To</string>
+    <string name="write_mail_subject">Subject</string>
+    <string name="write_mail_message">Message</string>
+    <string name="send_mail">SEND MAIL</string>
+    <string name="mail_regards">Regards,</string>
+    <string name="search_mail_contacts">Search by Name/Subject</string>
+
+
+    <!--ParentChatActivity-->
+    <string name="all_contact">ALL</string>
+    <string name="title_activity_teacher_emails">TeacherEmailsActivity</string>
+    <string name="title_activity_teacher_write_new_email">TeacherWriteNewEmailActivity</string>
+    <string name="title_activity_attendence">AttendenceActivity</string>
+
+    <string name="err" color="#9a1d1d">Reply Of</string>
+
+    <!--attendence-->
+    <string name="attendence_title">Attendance</string>
+    <string name="start_caps">START</string>
+    <string name="present_caps">PRESENT</string>
+    <string name="absent_caps">ABSENT </string>
+    <string name="url_save_attendence">/app/teacher/attendance/save</string>
+    <string name="url_new_mail">/app/conversations/new</string>
+    <string name="url_child_exam">/app/exams/result/</string>
+
+
+    <!--Generic Error messages-->
+    <string name="auth_error">wrong user id/password.</string>
+    <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="title_activity_gallery_album">GalleryAlbumActivity</string>
+    <string name="passwordchnagedsuccess">Password changed successfully</string>
+
+    <!--gallery-->
+    <string name="gallery">Gallery</string>
+    <string name="album_data">album_data</string>
+    <string name="album_list_data">album_list_data</string>
+    <string name="position">position</string>
+
+    <string name="title_activity_gallery_full_image">GalleryFullImageActivity</string>
+
+    <!--SLIDER MENU-->
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Find People</item>
+        <item>Photos</item>
+        <item>Communities</item>
+        <item>Pages</item>
+        <item>What\'s Hot</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_launcher_td</item>
+        <item>@drawable/ic_launcher_td</item>
+        <item>@drawable/ic_launcher_td</item>
+        <item>@drawable/ic_launcher_td</item>
+        <item>@drawable/ic_launcher_td</item>
+        <item>@drawable/ic_launcher_td</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_top_bar1">TopBar1</string>
+    <string name="title_activity_parent_sent">ParentSentActivity</string>
+    <string name="title_activity_sent_adapter">SentAdapter</string>
+    <string name="title_activity_sent_detail">SentDetailActivity</string>
+    <string name="title_activity_parent_write_mail_to_teacher2">ParentWriteMailToTeacher2</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_mail">Mail</string>
+    <string name="title_activity_support">SupportActivity</string>
+
+
+</resources>

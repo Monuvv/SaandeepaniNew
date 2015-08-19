@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <com.sandeepani.utils.TopBar1
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.sandeepani.utils.TopBar1>
+
+    <RelativeLayout
+        android:id="@+id/calLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/todayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="TODAY"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FF0000" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/handleImg"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/teacher_tab6" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/weekday_gridview_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="7"
+            android:stretchMode="columnWidth"
+            android:visibility="gone" >
+        </GridView>
+
+        <com.thehayro.view.InfiniteViewPager
+            android:id="@+id/infinite_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+        </com.thehayro.view.InfiniteViewPager>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/teacher_time_table_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>

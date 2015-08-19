@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.sandeepani.view.Teacher.AssignTaskActivity">
+
+    <com.sandeepani.utils.TopBar
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.sandeepani.utils.TopBar>
+
+    <include
+        android:id="@+id/teacher_details_rl"
+        layout="@layout/teacher_details_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                style="@style/hdpi_assign_task_label_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/choose_class_caps" />
+
+            <Spinner
+                android:id="@+id/class_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittextcustomheight"
+                android:background="@drawable/searchview_selector"
+                android:gravity="center_vertical"
+                android:scrollbars="none"
+                android:layout_marginTop="@dimen/textleftpadding4dp"
+                android:paddingLeft="@dimen/textleftpadding4dp"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                style="@style/hdpi_assign_task_label_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/choose_subject_caps" />
+
+            <Spinner
+                android:id="@+id/subject_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittextcustomheight"
+                android:layout_marginTop="@dimen/textleftpadding4dp"
+                android:background="@drawable/searchview_selector"
+                android:gravity="center_vertical"
+                android:scrollbars="none"
+                android:paddingLeft="@dimen/textleftpadding4dp"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                style="@style/hdpi_assign_task_label_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/task_to_do_caps" />
+
+            <EditText
+                android:id="@+id/task_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textleftpadding4dp"
+                android:background="@drawable/searchview_selector"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:text=""
+                android:hint="@string/whattodo"
+                android:textColorHint="@color/hinttxtcolor"
+                android:padding="10dp" />
+
+            <TextView
+                style="@style/hdpi_assign_task_label_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/choose_a_due_date_caps"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/choose_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittextcustomheight"
+                android:layout_marginTop="@dimen/textleftpadding4dp"
+                android:hint="@string/choose_a_due_date_caps"
+                android:textColorHint="@color/hinttxtcolor"
+                android:background="@drawable/searchview_selector"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp" />
+
+            <TextView
+                style="@style/hdpi_assign_task_label_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/select_students_caps" />
+
+            <RadioGroup
+                android:id="@+id/select_students_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/select_all_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:button="@drawable/radiobutton_selector"
+                    android:singleLine="true"
+                    android:text="@string/all_students"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/select_few_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:button="@drawable/radiobutton_selector"
+                    android:singleLine="true"
+                    android:text="@string/selected_students"></RadioButton>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/assign_task_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/hdpi_login_height"
+                android:layout_below="@+id/oldpwd_changepwd"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/assign_task_btn_selector"
+                android:paddingBottom="10dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="10dp"
+                android:text="@string/assign_task_caps"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/login_btn_border"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/assign_task_btn"
+                android:background="@color/done_dark_red_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/mondatory_fields" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

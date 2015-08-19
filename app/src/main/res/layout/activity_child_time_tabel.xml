@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <com.sandeepani.utils.TopBar1
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.sandeepani.utils.TopBar1>
+
+    <com.sandeepani.customView.SwitchChildView
+        android:id="@+id/switchchildBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.sandeepani.customView.SwitchChildView>
+
+    <RelativeLayout
+        android:id="@+id/calLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip">
+
+        <LinearLayout
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/todayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="-1.2dp"
+                android:text="27 Jun 2015"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="TODAY"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FF0000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/handleImg"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/teacher_tab6" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/weekday_gridview_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="7"
+            android:stretchMode="columnWidth"
+            android:visibility="gone"></GridView>
+
+        <com.thehayro.view.InfiniteViewPager
+            android:id="@+id/infinite_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"></com.thehayro.view.InfiniteViewPager>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/child_time_table_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/hinttxtcolor"
+        android:dividerHeight="0.5dp"></ListView>
+
+</LinearLayout>

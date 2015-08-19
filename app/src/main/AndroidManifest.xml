@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sandeepani.view" >
+
+    <permission
+        android:name="com.sandeepani.view.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.mapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- GCM connects to Google Services. -->
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.sandeepani.view.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive dataf message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NETWORK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.sa.googlemap.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.sandeepani.volley.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon_m"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- android:name=".CommonToApp.SplashScreenActivity" -->
+        <!-- android:name="sandeepaniani.slidingmenu.MainActivity" -->
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.SplashScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.mychild.view.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.LoginActivity"
+            android:label="@string/title_activity_Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentHomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ProfileFragmentActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.TeacherHomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ChildHomeWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ChildrenTimeTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentInboxActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentChatAvtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentWriteMailToTeacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.AttendanceActivity"
+            android:label="@string/title_activity_attendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.NotificationActivity"
+            android:label="@string/title_notification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentNoticeActivity"
+            android:label="@string/parent_notice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.NoticeActivity"
+            android:label="@string/parent_notice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.ChangePasswordActivity"
+            android:label="@string/parent_notice"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.pushbots.google.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.mychild.view" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sandeepani.utils.CustomHandler" />
+
+        <service android:name="com.pushbots.push.GCMIntentService" />
+
+        <activity
+            android:name="com.sandeepani.view.Teacher.AssignTaskActivity"
+            android:label="@string/title_activity_assign_task"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.SelectStudentActivity"
+            android:label="@string/title_activity_select_student"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ExamsActivity"
+            android:label="@string/title_activity_exams"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.TeacherEmailsActivity"
+            android:label="@string/title_activity_teacher_emails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.TeacherWriteNewEmailActivity"
+            android:label="@string/title_activity_teacher_write_new_email"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.AttendenceUpdateActivity"
+            android:label="@string/title_activity_attendence"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.TeacherTimeTabelActivity"
+            android:label="@string/title_teacher_timetabel"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Teacher.TeacherCalenderEventsActivity"
+            android:label="@string/title_teacher_calender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentMailDetailedActivity"
+            android:label="@string/title_parent_mail_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.GalleryActivity"
+            android:label="@string/title_activity_gallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.GalleryAlbumActivity"
+            android:label="@string/title_activity_gallery_album"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.CommonToApp.GalleryFullImageActivity"
+            android:label="@string/title_activity_gallery_full_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentTransportMapRouteActivity"
+            android:label="@string/title_activity_exams"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCsUJDV_fX8CtbEnqUu5zMTkIBw0IsLFR0" />
+
+        <!--
+       <meta-data
+           android:name="com.google.android.maps.v2.API_KEY"
+           android:value="AIzaSyAZ209c8q_suKuXmk22nkZAGNYznK9tdOw" />
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentSentActivity"
+            android:label="@string/title_activity_parent_sent" >
+        </activity>
+        <activity
+            android:name="com.sandeepani.view.Parent.ParentWriteMailToTeacher2"
+            android:label="@string/title_activity_parent_write_mail_to_teacher2" >
+        </activity>
+        <activity
+            android:name="com.sandeepani.view.Parent.SentDetailActivity"
+            android:label="@string/title_activity_sent_detail" >
+        </activity>
+        <activity
+            android:name="com.sandeepani.utils.SupportActivity"
+            android:label="@string/title_activity_support" >
+        </activity>
+    </application>
+
+</manifest>

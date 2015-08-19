@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true">
+
+    <RelativeLayout
+        android:id="@+id/homeworkRL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     >
+
+        <ImageView
+            android:id="@+id/homework_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_smallhomework" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/homework_image"
+            android:text="Title"
+            android:textAllCaps="true"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/descreption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/homework_image"
+            android:layout_below="@+id/title"
+android:paddingRight="10dp"
+            android:text="description" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

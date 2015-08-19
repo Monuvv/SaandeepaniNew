@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.sandeepani.view.Teacher.AttendenceUpdateActivity">
+
+    <com.sandeepani.utils.TopBar1
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.sandeepani.utils.TopBar1>
+
+    <include
+        android:id="@+id/teacher_details_rl"
+        layout="@layout/teacher_details_layout" />
+
+    <RelativeLayout
+        android:id="@+id/cal_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teacher_details_rl"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/today_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/todayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_lyt"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/weekday_gridview_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="7"
+            android:stretchMode="columnWidth"
+            android:visibility="gone"></GridView>
+
+        <com.thehayro.view.InfiniteViewPager
+            android:id="@+id/infinite_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"></com.thehayro.view.InfiniteViewPager>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/students_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/hinttxtcolor"
+        android:dividerHeight="0.5dp"
+        android:layout_below="@+id/topDate"></ListView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TableRow
+            android:id="@+id/tr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/present_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/present_caps"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/absent_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/present_tv"
+                    android:layout_gravity="center"
+                    android:text="@string/absent_caps"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"></View>
+
+            <TextView
+                android:id="@+id/result_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="60/60"
+                android:textColor="@color/black" />
+        </TableRow>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="edit"
+            android:id="@+id/edit"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/done_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/red"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/start_caps"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

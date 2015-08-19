@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/inboxMessageIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:background="@drawable/icon_inbox">
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/toteacherNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher Name"
+            android:layout_toRightOf="@+id/inboxMessageIV"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/mailSubTV"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Subject Name"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/inboxMessageIV"
+            android:layout_below="@+id/toteacherNameTV"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/mailDescripTV"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Message"
+            android:layout_toRightOf="@+id/inboxMessageIV"
+            android:layout_below="@+id/mailSubTV"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Date"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/toteacherNameTV"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/homeworkRL"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <com.sandeepani.utils.TopBar1
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.sandeepani.utils.TopBar1>
+
+
+
+    <RelativeLayout
+        android:id="@+id/new_emialRV"
+        android:layout_below="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_back_dark"/>
+
+        <RelativeLayout
+            android:id="@+id/mailinfobarRV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/write_mailIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_new_mail"
+                android:visibility="gone"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/write_mailIV"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/write_mailIV"
+                android:layout_below="@+id/date"
+                android:textColor="@color/done_red_color"
+                android:layout_height="wrap_content"
+                android:text="@string/day"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mail_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/new_emialRV">
+
+        <ImageView
+            android:id="@+id/inboxMessageIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:background="@drawable/icon_inbox">
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/mailTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_toRightOf="@+id/inboxMessageIV"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:id="@+id/mailTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/inboxMessageIV"
+            android:layout_below="@+id/mailTimeTV"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/mailFromTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/inboxMessageIV"
+            android:layout_below="@+id/mailTitleTV"
+            android:layout_marginLeft="10dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/mail_header"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/mail_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/divider1"
+        android:text="Mail Description..."
+        android:layout_marginLeft="20dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/mail_details"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/regards"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/divider2"
+        android:text="@string/mail_regards"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/regards_from"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/regards"
+        android:text="@string/mail_regards"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mychild.view.HomeActivity"/>
+      <point      
+        x = "1884"      
+        y = "472"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.mychild.view.HomeActivity"/>
+      <point      
+        x = "2060"      
+        y = "36"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mychild.view.CommonToApp.LoginActivity"/>
+      <point      
+        x = "484"      
+        y = "472"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.mychild.view.CommonToApp.LoginActivity"/>
+      <point      
+        x = "1444"      
+        y = "660"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.mychild.view.StudentList2"/>
+      <point      
+        x = "3032"      
+        y = "476"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

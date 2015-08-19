@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/resultsLV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/subjectTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_horizontal"
+            android:text="Subject"
+            android:textColor="@color/grey"
+            android:layout_weight="0.4"
+            android:textAllCaps="true"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/markTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.2"
+            android:text="MARK"
+            android:textColor="@color/grey"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/gradeTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.2"
+            android:text="GRADE"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/statusTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="0.2"
+            android:text="STATUS"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
